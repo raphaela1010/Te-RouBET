@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Te RouBET</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="login.html" class="active">Login</a>
+            <a href="apostas.html">Apostas</a>
+        </nav>
+    </header>
+    <main>
+        <section class="login-section">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginUsuario">Usuário:</label>
+                <input type="text" id="loginUsuario" name="loginUsuario" required>
+
+                <label for="loginSenha">Senha:</label>
+                <input type="password" id="loginSenha" name="loginSenha" required>
+
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Te RouBET. Todos os direitos foram roubados..</p>
+    </footer>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const usuario = document.getElementById('loginUsuario').value;
+            const senha = document.getElementById('loginSenha').value;
+
+            // Carregar os dados do usuário (simulação)
+            const usuarioDados = JSON.parse(localStorage.getItem('usuario_' + usuario));
+
+            if (usuarioDados && usuarioDados.senha === senha) {
+                alert('Login realizado com sucesso! Seu crédito é: R$' + usuarioDados.credito);
+
+                // Redirecionar para a página de apostas ou outra página
+                window.location.href = 'apostas.html';
+            } else {
+                alert('Usuário ou senha incorretos.');
+            }
+        });
+    </script>
+</body>
+</html>

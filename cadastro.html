@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="pagina-cadastro">
+    <header>
+        <h1>Te RouBET</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="cadastro.html" class="active">Cadastro</a>
+            <a href="login.html">Login</a>
+            <a href="apostas.html">Apostas</a>
+        </nav>
+    </header>
+    <main>
+        <section class="cadastro-section ticket">
+            <h2>Cadastro</h2>
+            <form id="cadastroForm">
+                <label for="nomeCompleto">Nome Completo:</label>
+                <input type="text" id="nomeCompleto" name="nomeCompleto" required>
+
+                <label for="dataNascimento">Data de Nascimento:</label>
+                <input type="date" id="dataNascimento" name="dataNascimento" required>
+
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" name="usuario" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+
+                <label for="cupomPromocional">Cupom Promocional:</label>
+                <input type="text" id="cupomPromocional" name="cupomPromocional">
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Te RouBET. Todos os direitos foram roubados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te RouBET - Apostas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="pagina-apostas">
+    <header>
+        <h1>Te RouBET</h1>
+        <nav>
+            <a href="index.html">Página Inicial</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="login.html">Login</a>
+            <a href="apostas.html" class="active">Apostas</a>
+        </nav>
+    </header>
+    <main>
+        <h2 class="apostas">Apostas</h2>
+        <div class="match ticket">
+            <h3>São Paulo x Corinthians</h3>
+            <form onsubmit="placeBet(event, 'São Paulo x Corinthians', { 'São Paulo': 2.50, 'Corinthians': 4.70, 'Empate': 3.00 })">
+                <label>
+                    <input type="radio" name="team" value="São Paulo" required> São Paulo <span class="odd">(ODD: 2.50)</span>
+                </label>
+                <label>
+                    <input type="radio" name="team" value="Corinthians"> Corinthians <span class="odd">(ODD: 4.70)</span>
+                </label>
+                <label>
+                    <input type="radio" name="team" value="Empate"> Empate <span class="odd">(ODD: 3.00)</span>
+                </label>
+                <label>
+                    Valor da Aposta: <input type="number" name="amount" min="1" required>
+                </label>
+                <p class="potential-win">Potencial de Ganho: <span>R$0.00</span></p>
+                <button type="submit">Apostar</button>
+            </form>
+        </div>
+        <div class="match ticket">
+            <h3>Palmeiras x Santos</h3>
+            <form onsubmit="placeBet(event, 'Palmeiras x Santos', { 'Palmeiras': 1.80, 'Santos': 7.20, 'Empate': 3.50 })">
+                <label>
+                    <input type="radio" name="team" value="Palmeiras" required> Palmeiras <span class="odd">(ODD: 1.80)</span>
+                </label>
+                <label>
+                    <input type="radio" name="team" value="Santos"> Santos <span class="odd">(ODD: 7.20)</span>
+                </label>
+                <label>
+                    <input type="radio" name="team" value="Empate"> Empate <span class="odd">(ODD: 3.50)</span>
+                </label>
+                <label>
+                    Valor da Aposta: <input type="number" name="amount" min="1" required>
+                </label>
+                <p class="potential-win">Potencial de Ganho: <span>R$0.00</span></p>
+                <button type="submit">Apostar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Te RouBET. Todos os direitos foram roubados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
